@@ -1,0 +1,21 @@
+    tr{
+    font-family: cursive;
+    font-size: medium;
+    font-style: oblique;
+    font-weight: bold;
+    color:teal;
+    }
+    
+    
+   .form-container{
+   background-color: white;
+   padding: 20px;
+   border-color: gray;
+   border-radius: 20px;
+   box-shadow: 0 4px 8px rgba(1,1,1,1);
+   width: 40%;
+   margin: auto;
+ }
+
+
+   

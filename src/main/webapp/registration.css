@@ -1,0 +1,131 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+body{
+    display:block;
+   background-image:url("images/image2.jpg");
+    background-size:cover;
+    height: 140vh;
+    justify-content:center;
+    align-items:center;
+    padding: 10px;
+}
+
+.container{
+    max-width: 700px;
+    width:100%;
+    background: whitesmoke;
+    padding: 25px 30px;
+    border-radius: 20px;
+    margin: auto;  
+
+}
+
+.container .title{
+    font-size: 30px;
+    font-weight: 600;
+    color: darkblue;
+   position: relative;
+}
+
+.container  .title::before
+{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width:290px;
+    background: linear-gradient(120deg,rgb(111, 111, 216),rgb(91, 220, 91));
+}
+
+
+form .user-details .input-box{
+    margin: 20px 0 12px 0;
+    width: calc(100%/2- 20px);
+}
+
+.user-details .input-box input {
+    height: 35px;
+    width: 100%;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding-left: 15px;
+    font-size: 16px;
+    border-bottom-width: 2px ;
+    transition: all 0.5s ease;
+}
+
+
+.user-details .input-box .details {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 5px;
+
+}
+
+.user-details .input-box input:focus,
+.user-details .input-box input:valid{
+  border-color: #9b59b6;
+}
+
+form .gender-details .gender-title{
+   font-size: 16px;
+   font-weight: 600; 
+} 
+
+form .gender-details .category{
+   display: flex; 
+   width: 80%;
+   justify-content: space-between;
+   margin: 14px 0;
+}
+
+input[type="submit"]{
+    width: 20%;
+    height: 30px;
+    border: 1px solid;
+    background: #60bf7d;
+    border-radius: 5px;
+    font-size: 20px;
+    color: #e9f4fb;
+    font-weight: 700;
+    cursor: pointer;
+    outline: none;
+}
+
+input[type="submit"]:hover{
+border-color: rgb(66, 178, 83);
+transition: .5s ;
+}
+
+input[type="reset"]{
+    width: 20%;
+    height: 30px;
+    border: 1px solid;
+    background: #6d7bca;
+    border-radius: 5px;
+    font-size: 20px;
+    color: #e9f4fb;
+    font-weight: 700;
+    cursor: pointer;
+    outline: none;
+}
+
+input[type="submit"]:hover{
+border-color: rgb(66, 178, 83);
+transition: .5s ;
+}
+
+
+
+
+ 
+
+
+

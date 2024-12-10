@@ -1,0 +1,128 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #333;
+}
+
+#contact-form {
+    width: 80%;
+    max-width: 800px;
+    margin: auto;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+}
+
+#contact-form h1 {
+    font-size: 24px;
+    color: #444;
+}
+
+#contact-form h4 {
+    font-size: 16px;
+    color: #777;
+    margin-bottom: 20px;
+}
+
+form {
+    flex: 1;
+}
+
+form div {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+input, textarea, select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+    margin-top: 5px;
+    outline: none;
+}
+
+input:focus, textarea:focus, select:focus {
+    border-color: #6a11cb;
+    box-shadow: 0 0 5px rgba(106, 17, 203, 0.5);
+}
+
+textarea {
+    resize: none;
+    height: 100px;
+}
+
+input[type="submit"], input[type="reset"] {
+    background-color: #6a11cb;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 10px;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+input[type="submit"]:hover, input[type="reset"]:hover {
+    background-color: #2575fc;
+}
+
+#failure, #success {
+    display: none;
+    text-align: center;
+    font-size: 14px;
+    color: red;
+}
+
+#success {
+    color: green;
+}
+
+/* Left Section Design */
+#contact-form > div:first-child {
+    flex: 0.8;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#contact-form > div:first-child h1, 
+#contact-form > div:first-child h4 {
+    text-align: center;
+}
+
+#contact-form img {
+    max-width: 80%;
+    margin-bottom: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #contact-form {
+        flex-direction: column;
+        padding: 20px;
+    }
+    
+    form {
+        width: 100%;
+    }
+}

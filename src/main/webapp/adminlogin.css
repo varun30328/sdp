@@ -1,0 +1,131 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    overflow: hidden;
+    display: block;
+    justify-content: center;
+    align-items: center;
+}
+
+.center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    padding: 20px;
+    height: auto;
+    background: rgba(255, 255, 255, 0.2); /* Transparent background */
+    border-radius: 20px;
+    backdrop-filter: blur(10px); /* Glass effect */
+}
+
+.center h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-family: serif;
+    color: navy;
+    font-size: 24px;
+}
+
+.center form {
+    padding: 0 40px;
+    box-sizing: border-box;
+}
+
+form .txt_field {
+    position: relative;
+    margin: 30px 0;
+}
+
+.txt_field input {
+    width: 100%;
+    padding: 0 5px;
+    height: 40px;
+    font-size: 16px;
+    border: none;
+    background: rgba(255, 255, 255, 0.3); /* Slight transparency */
+    border-radius: 5px;
+    color: #333;
+    outline: none;
+}
+
+.txt_field label {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    color: #adadad;
+    transform: translateY(-50%);
+    font-size: 16px;
+    pointer-events: none;
+    transition: 0.3s;
+}
+
+.txt_field input:focus ~ label,
+.txt_field input:valid ~ label {
+    top: -10px;
+    color: #2691d9;
+    font-size: 14px;
+}
+
+.pass {
+    margin: -5px 0 20px 5px;
+    color: #a6a6a6;
+    cursor: pointer;
+}
+
+.pass:hover {
+    text-decoration: underline;
+    color: #2691d9;
+}
+
+input[type="submit"],
+input[type="reset"] {
+    width: 100%;
+    height: 50px;
+    border: none;
+    background: rgba(0, 128, 255, 0.8); /* Blue with transparency */
+    border-radius: 25px;
+    font-size: 20px;
+    color: #e9f4fb;
+    font-weight: 700;
+    cursor: pointer;
+    outline: none;
+    transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+    background-color: #1e90ff;
+}
+
+input[type="reset"] {
+    background: rgba(255, 0, 0, 0.8); /* Red with transparency */
+}
+
+input[type="reset"]:hover {
+    background-color: red;
+}
+
+.signup_link {
+    margin: 30px 0;
+    text-align: center;
+    font-size: 16px;
+    color: #666666;
+}
+
+.signup_link a {
+    color: #2691d9;
+    text-decoration: none;
+}
+
+.signup_link a:hover {
+    text-decoration: underline;
+}

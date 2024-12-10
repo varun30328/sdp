@@ -1,0 +1,259 @@
+/* General Styles */
+body, h1, h2, p, ul, li, a, button {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  height: 70vh;
+  color: #333;
+  line-height: 1.6;
+  scroll-behavior: smooth; /* Smooth scrolling */
+  background-attachment: fixed; /* Parallax effect */
+}
+
+/* Navbar */
+header {
+  background-color: #34495e;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  padding: 10px 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+}
+
+.navbar li a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.2em;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.navbar li a:hover {
+  color: #e74c3c;
+}
+
+/* Hero Section */
+/* Hero Section */
+.hero {
+  position: relative;
+  background: url('./images/nutri.jpg') no-repeat center center/cover;
+  height: 250vh; /* Full viewport height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+  background-attachment: fixed; /* Parallax effect */
+  
+}
+
+/* Add a pseudo-element to apply blur to the background */
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: inherit; /* Use the same image as the background */
+  filter: blur(10px); /* Apply blur to the background */
+  z-index: -1; /* Place behind the content */
+}
+
+/* Overlay for text */
+.hero .overlay {
+  padding: 40px;
+  border-radius: 15px;
+  backdrop-filter: blur(5px); /* Optional - adds blur to the content overlay */
+ /* Darker background */
+  z-index: 1; /* Ensure it's above the blurred background */
+}
+
+/* Text styling in the Hero section */
+.hero h1 {
+  font-size: 3em;
+  margin-bottom: 10px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add shadow for better visibility */
+}
+
+.hero p {
+  font-size: 1.2em;
+  font-weight: 300;
+}
+
+
+
+
+/* Parallax Section */
+.parallax-section {
+  padding: 50px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f7f9fc;
+}
+
+.parallax-content {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.parallax-content img {
+  width: 40%;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.parallax-content div {
+  width: 50%;
+}
+
+.parallax-content.reverse {
+  flex-direction: row-reverse;
+}
+
+.parallax-content h2 {
+  font-size: 2em;
+  color: #34495e;
+  margin-bottom: 20px;
+}
+
+.parallax-content p {
+  font-size: 1.2em;
+  color: #555;
+  line-height: 1.8;
+}
+
+/* Image Gallery Section */
+.image-gallery {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.image-gallery h2 {
+  font-size: 2.5em;
+  color: #34495e;
+  margin-bottom: 20px;
+}
+
+.gallery {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.gallery img {
+  width: 220px;
+  height: 160px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.gallery img:hover {
+  transform: scale(1.1);
+}
+
+/* Footer */
+footer {
+  background: #34495e;
+  color: white;
+  text-align: center;
+  padding: 15px 0;
+  font-size: 0.9em;
+  margin-top: 30px;
+}
+
+/* Enable smooth scrolling on the entire page */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Container for horizontally scrolling content */
+#start-here {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh; /* Make it take the full screen height */
+  text-align: center;
+}
+
+/* Style the start button container */
+.button-container {
+  margin-top: 0px;
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* Style the start button */
+.start-button {
+  background-color: #e74c3c;
+  color: white;
+  font-size: 1.5em;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  z-index: 2;
+}
+
+.start-button:hover {
+  background-color: #c0392b;
+  transform: scale(1.1);
+}
+/* Style the button link */
+.start-button a {
+  text-decoration: none;
+  color: white;
+  display: block;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+
+/* Adding the scrolling effect */
+#start-here {
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.start-button {
+  position: relative;
+  animation: scroll-left-right 4s infinite  ;
+}
+
+/* Animation for the button to move left and right */
+@keyframes scroll-left-right {
+  0% {
+      transform: translateX(-50%);
+  }
+  50% {
+      transform: translateX(50%);
+  }
+  100% {
+      transform: translateX(-50%);
+  }
+}

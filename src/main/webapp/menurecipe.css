@@ -1,0 +1,97 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: auto;
+  width: 100%;
+  font-family: monospace;
+}
+
+body {
+  display: flex;
+  align-items: flex-start;
+}
+
+/* Sidebar Styling */
+.sidebar {
+  width: 20%; /* Width for sidebar */
+  height: 120vh; /* Full screen height */
+  background-color: #f5ebe04f;
+  border-right: 16px solid #f5ebe0;
+  box-shadow: 8px 0 16px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20px;
+  position: relative;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: black;
+  padding: 20px;
+}
+
+/* Tabs Styling */
+.tabs {
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: relative;
+}
+
+.nav__links {
+  list-style: none;
+  width: 100%;
+}
+
+.nav__links li {
+  width: 100%;
+}
+
+.nav__links li a {
+  display: block;
+  padding: 15px 20px;
+  font-size: 18px;
+  font-weight: 600;
+  color: black;
+  text-decoration: none;
+  border-radius: 0 20px 20px 0;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.nav__links li a:hover, 
+.nav__links li a.active {
+  background-color: #d4c2b4; /* Shaded background color */
+  color:#fb446b; /* Active text color */
+}
+
+/* Marker Styling */
+.marker {
+  position: absolute;
+  width: 6px;
+  height: calc(90% / 6); /* Adjust based on number of menu items */
+  left: 0;
+  top: 0;
+  background-color: #f5ebe0;
+  border-radius: 0 8px 8px 0;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Position marker based on selected item */
+.nav__links li:nth-child(1):hover ~ .marker { transform: translateY(calc(100% / 6 * 0)); }
+.nav__links li:nth-child(2):hover ~ .marker { transform: translateY(calc(100% / 6 * 1)); }
+.nav__links li:nth-child(3):hover ~ .marker { transform: translateY(calc(100% / 6 * 2)); }
+.nav__links li:nth-child(4):hover ~ .marker { transform: translateY(calc(100% / 6 * 3)); }
+.nav__links li:nth-child(5):hover ~ .marker { transform: translateY(calc(100% / 6 * 4)); }
+.nav__links li:nth-child(6):hover ~ .marker { transform: translateY(calc(100% / 6 * 5)); }
+.nav__links li:nth-child(7):hover ~ .marker { transform: translateY(calc(100% / 6 * 6)); }
+.nav__links li:nth-child(8):hover ~ .marker { transform: translateY(calc(100% / 6 * 7)); }
+.nav__links li:nth-child(9):hover ~ .marker { transform: translateY(calc(100% / 6 * 8)); }
